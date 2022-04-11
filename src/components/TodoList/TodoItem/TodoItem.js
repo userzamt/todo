@@ -3,7 +3,7 @@ import React from "react";
 
 function TodoItem(props) {
 
-    console.log(props);
+    // console.log(props);
 
     return (
         <li className="list-group-item list-group-item-action">

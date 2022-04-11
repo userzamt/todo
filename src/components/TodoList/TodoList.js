@@ -43,16 +43,11 @@ function TodoList() {
             },
         ];
 
-    console.log(todoList);
+    // console.log(todoList);
 
     return (
         <ul className="list-group">
-            <TodoItem
-                name="Разработка todo-приложения"
-                datetime="сегодня"
-                text="Создать на основе примера из книге по React приложение для списка дел."
-                status="Срок: неопределенно"
-            />
+            <TodoItem data={todoList[0]} />
             <TodoItem data={todoList[1]} />
             <TodoItem data={todoList[2]} />
             <TodoItem data={todoList[3]}/>
