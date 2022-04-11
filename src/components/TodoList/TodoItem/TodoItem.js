@@ -1,16 +1,18 @@
 import React from "react";
 
 
-function TodoItem() {
+function TodoItem(props) {
+
+    // console.log(props);
 
     return (
         <li className="list-group-item list-group-item-action">
             <div className="d-flex w-100 justify-content-between">
-                <h5 className="mb-1">Разработка todo-приложения</h5>
-                <small className="text-muted">сегодня</small>
+                <h5 className="mb-1">{props.name}</h5>
+                <small className="text-muted">{props.datetime}</small>
             </div>
-            <p className="mb-1">Создать на основе примера из книге по React приложение для списка дел.</p>
-            <small className="text-muted">Срок: неопределенно</small>
+            <p className="mb-1">{props.text}</p>
+            <small className="text-muted">{props.status}</small>
         </li>
     );
 }

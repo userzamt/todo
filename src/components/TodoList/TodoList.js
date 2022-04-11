@@ -6,7 +6,12 @@ function TodoList() {
 
     return (
         <ul className="list-group">
-            <TodoItem />
+            <TodoItem
+                name="Разработка todo-приложения"
+                datetime="сегодня"
+                text="Создать на основе примера из книге по React приложение для списка дел."
+                status="Срок: неопределенно"
+            />
             <TodoItem />
             <TodoItem />
             <TodoItem />
