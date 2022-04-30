@@ -1,4 +1,5 @@
 import React from "react";
+import "./TodoItem.css";
 
 
 function TodoItem(props) {
@@ -30,8 +31,16 @@ function TodoItem(props) {
                 <h5 className="mb-1">{props.title}</h5>
                 <small className="text-muted">{dateOfIssue.toLocaleDateString("ru", options)}</small>
             </div>
-            <p className="mb-1">{props.description}</p>
-            <small className="text-muted">{props.note}</small>
+            <div className="d-flex w-100 justify-content-between">
+                <div>
+                    <p className="mb-1 me-4 text-justify">{props.description}</p>
+                    <small className="text-muted">{props.note}</small>
+                </div>
+                <div className="form-check form-switch align-self-lg-center">
+                    <input className="form-check-input" type="checkbox"  checked={props.status === "success" } />
+                </div>
+            </div>
+
         </li>
     );
 }
