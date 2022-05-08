@@ -1,15 +1,24 @@
-import React from "react";
+import React, {Component} from "react";
 import TodoList from "./components/TodoList/TodoList";
 import todoData from "./todoData";
 
 
-function App() {
+class App extends Component{
+    constructor() {
+        super();
 
-  return (
-    <div className="container">
-        <TodoList data={todoData} />
-    </div>
-  );
+        this.state = {
+            todoData,
+        };
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <TodoList data={this.state.todoData} />
+            </div>
+        );
+    }
 }
 
 export default App;
